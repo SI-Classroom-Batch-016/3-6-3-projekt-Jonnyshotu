@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editCL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.EditFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/editCV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/editSaveBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/baseline_check_24"
+                app:layout_constraintBottom_toBottomOf="@+id/editHeaderET"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editHeaderET" />
+
+            <EditText
+                android:id="@+id/editHeaderET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:hint="headline"
+                android:textColor="@color/ghost_white"
+                android:textColorHint="@color/ghost_white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/editCancelBTN"
+                app:layout_constraintStart_toEndOf="@+id/editSaveBTN"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/editCancelBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/baseline_close_24"
+                app:layout_constraintBottom_toBottomOf="@+id/editHeaderET"
+                app:layout_constraintEnd_toStartOf="@+id/editDeleteBTN"
+                app:layout_constraintTop_toTopOf="@+id/editHeaderET" />
+
+            <ImageButton
+                android:id="@+id/editDeleteBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/baseline_delete_forever_24"
+                app:layout_constraintBottom_toBottomOf="@+id/editCancelBTN"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editCancelBTN" />
+
+            <EditText
+                android:id="@+id/editNoteET"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="start"
+                android:hint="tpye your note..."
+                android:textColor="@color/ghost_white"
+                android:textColorHint="@color/ghost_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/editHeaderET"
+                app:layout_constraintStart_toStartOf="@+id/editHeaderET"
+                app:layout_constraintTop_toBottomOf="@+id/editHeaderET" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
