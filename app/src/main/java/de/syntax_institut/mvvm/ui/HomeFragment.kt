@@ -11,14 +11,11 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import de.syntax_institut.mvvm.SharedViewModel
 import de.syntax_institut.mvvm.adapter.NoteAdapter
-import de.syntax_institut.mvvm.adapter.OnDeleteNoteClick
-import de.syntax_institut.mvvm.adapter.OnEditNoteClick
-import de.syntax_institut.mvvm.adapter.OnFlagClick
-import de.syntax_institut.mvvm.adapter.OnNoteClick
+import de.syntax_institut.mvvm.adapter.OnClick
 import de.syntax_institut.mvvm.data.module.Note
 import de.syntax_institut.mvvm.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment(), OnEditNoteClick, OnNoteClick, OnDeleteNoteClick, OnFlagClick {
+class HomeFragment : Fragment(), OnClick {
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var adapter: NoteAdapter
@@ -36,7 +33,7 @@ class HomeFragment : Fragment(), OnEditNoteClick, OnNoteClick, OnDeleteNoteClick
         binding = FragmentHomeBinding.inflate(inflater)
 
         recyclerView = binding.homeRV
-        adapter = NoteAdapter(this,this,this, this)
+        adapter = NoteAdapter(this)
 
         recyclerView.adapter = adapter
 

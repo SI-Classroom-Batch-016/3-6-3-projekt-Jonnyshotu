@@ -11,10 +11,7 @@ import de.syntax_institut.mvvm.data.module.NoteDiffUtil
 import de.syntax_institut.mvvm.databinding.NoteListBinding
 
 class NoteAdapter(
-    private val listenerEdit: OnEditNoteClick,
-    private val listenerNote: OnNoteClick,
-    private val listenerDelete: OnDeleteNoteClick,
-    private val listenerFlag: OnFlagClick
+    private val listener: OnClick
 ) : ListAdapter<Note, NoteAdapter.ItemViewHolder>(NoteDiffUtil()) {
 
     inner class ItemViewHolder(val binding: NoteListBinding) : RecyclerView.ViewHolder(binding.root)
@@ -43,16 +40,16 @@ class NoteAdapter(
                 3 -> noteListFlagIV.setImageResource(R.drawable.baseline_flag_24_red)
             }
             noteListEditBTN.setOnClickListener {
-                listenerEdit.onEditNoteClick(note)
+                listener.onEditNoteClick(note)
             }
             noteListLLTV.setOnClickListener {
-                listenerNote.onNoteClick(note)
+                listener.onNoteClick(note)
             }
             noteListDeleteBTN.setOnClickListener {
-                listenerDelete.onDeleteNoteClick(note)
+                listener.onDeleteNoteClick(note)
             }
             noteListFlagIV.setOnClickListener {
-                listenerFlag.onFlagClick(note)
+                listener.onFlagClick(note)
             }
         }
     }
