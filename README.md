@@ -27,3 +27,4 @@ hierher zurück kommen, um die Logik zu ergänzen. <br/>
 8. Programmiere den "View" Abschnitt der MVVM Struktur. <br/>
 9. Schaue nochmal in die LiveApps, nutze das Internet und stelle gezielte Fragen im Slack oder Zoom.
 </details>
+# 3-6-3-projekt-Jonnyshotu
